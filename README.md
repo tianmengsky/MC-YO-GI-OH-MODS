@@ -51,9 +51,13 @@ MDPro3 快照不是完整可运行的 Unity 程序，也不是其源码仓库；
 
 当前发布件为 `releases/0.6.33-alpha/yugioh-mdpro-integrated-0.6.33-alpha.jar`，SHA-256 `6662d14a52316b1d6f59235937fd40f804e40ffbe00ce23aad0437d9b97440ee`，与工作区实例 `MCYoGiOh` 中已部署的 JAR 逐字节一致。同目录 `SHA256SUMS.txt` 记录该值；Gradle 构建产物仍输出到 `addon/build/libs/`，两种位置以 SHA-256 校验为准。
 
+该 JAR 同时出现在 `releases/0.6.33-alpha/`、`MCYoGiOh` 实例、`run-client/mods/`、`run-debug/mods/` 四处，通过 NTFS 硬链接指向同一个文件记录（`fsutil hardlink list <路径>` 可列出全部四处），磁盘上只占一份 755 MB。**升级时请使用新版本号文件名**：若用同名文件原地覆盖其中任一处，会同时改变其余三处；确需单独替换某处时，先删除该路径下的链接再复制新文件。
+
 ### 磁盘清理（2026-10-18）
 
-已删除 82,352 MB（80.4 GB，按 1 GB = 1024 MB 计）共 48,329 个历史文件：`addon/build/`（42,612 MB，中间产物与 68 个旧版 JAR）、`generated/deployment-backup/`（27,924 MB，49 个 0.1–0.6.32 部署备份）、`generated/release-snapshot/`（8,908 MB，20 个旧发行 JAR）、`generated/tmp/`（707 MB），以及 `generated/gui-redesign-0.6.27/`、`gui-refinement-0.6.28/`、`gui-crash-20261017/` 内的旧版 JAR（各 733 MB，截图与日志证据保留）。工作区由约 93.8 GB 降至约 14.5 GB。
+已删除 82,352 MB（80.4 GB，按 1 GB = 1024 MB 计）共 48,329 个历史文件：`addon/build/`（42,612 MB，中间产物与 68 个旧版 JAR）、`generated/deployment-backup/`（27,924 MB，49 个 0.1–0.6.32 部署备份）、`generated/release-snapshot/`（8,908 MB，20 个旧发行 JAR）、`generated/tmp/`（707 MB），以及 `generated/gui-redesign-0.6.27/`、`gui-refinement-0.6.28/`、`gui-crash-20261017/` 内的旧版 JAR（各 733 MB，截图与日志证据保留）。随后把发布件的三份副本改为硬链接，再省 2.2 GB。
+
+工作区由约 93.8 GB 降至 14.2 GB（按路径累加）／**约 12.0 GB 实际占用**；差值来自发布 JAR 的 4 个硬链接只存一份。
 
 `run-client`、`run-debug` 的旧版 JAR 已替换为 0.6.33-alpha（复制后按 SHA-256 校验通过再删除旧件），`run-server` 无模组 JAR 无需处理。
 
