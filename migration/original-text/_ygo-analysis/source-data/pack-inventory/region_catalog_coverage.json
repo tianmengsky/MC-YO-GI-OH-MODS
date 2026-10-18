@@ -1,0 +1,53 @@
+{
+  "ja": {
+    "products": 855,
+    "complete": 855,
+    "distinct_cids": 8231,
+    "raw_t_row_count": 1524,
+    "catalog_rows": 1524,
+    "index_parser_skipped_rows": 0,
+    "in_scope": 855,
+    "excluded_after_cutoff": 669,
+    "excluded_uncertain_date": 0,
+    "cached_sha256": "7a12a15f0db93a4c8c8ab9a2582515a7e578b0e486838a7ddcabe84c91d2dcd0",
+    "cached_retrieved_at": "2026-10-15T00:57:13.359066+00:00",
+    "year_only_in_scope": 0,
+    "pids_absent_from_ja_en": 0,
+    "status": "complete_relative_to_official_catalog",
+    "source_url": "https://www.db.yugioh-card.com/yugiohdb/card_list.action?clm=1&request_locale=ja"
+  },
+  "en": {
+    "products": 595,
+    "complete": 595,
+    "distinct_cids": 7863,
+    "raw_t_row_count": 935,
+    "catalog_rows": 935,
+    "index_parser_skipped_rows": 0,
+    "in_scope": 595,
+    "excluded_after_cutoff": 340,
+    "excluded_uncertain_date": 0,
+    "cached_sha256": "34734ee47538ee3c9df4f41e1ddcf56603f980b2b12ff9063cbacf729775fdd3",
+    "cached_retrieved_at": "2026-10-15T00:57:14.875437+00:00",
+    "year_only_in_scope": 46,
+    "pids_absent_from_ja_en": 0,
+    "status": "complete_relative_to_official_catalog",
+    "source_url": "https://www.db.yugioh-card.com/yugiohdb/card_list.action?clm=1&request_locale=en"
+  },
+  "cn": {
+    "products": 0,
+    "complete": 0,
+    "distinct_cids": 0,
+    "raw_t_row_count": 172,
+    "catalog_rows": 172,
+    "index_parser_skipped_rows": 0,
+    "in_scope": 0,
+    "excluded_after_cutoff": 172,
+    "excluded_uncertain_date": 0,
+    "cached_sha256": "9da1871dfe31dbed8ba69b7be97f96f20b485de0f420efc5f50962207fff5ec7",
+    "cached_retrieved_at": "2026-10-15T00:59:48.663077+00:00",
+    "year_only_in_scope": 0,
+    "pids_absent_from_ja_en": 0,
+    "status": "complete_relative_to_official_catalog",
+    "source_url": "https://www.db.yugioh-card.com/yugiohdb/card_list.action?clm=1&request_locale=cn"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-15T02:46:51.011063+00:00",
+  "workspace": "F:\\Minecarft\\游戏王mod工作区",
+  "checks": {
+    "all_transfers_sha256_verified_before_path_updates": true,
+    "moved_sources_absent": true,
+    "installed_runtime_jars_unchanged": true,
+    "runtime_mods_contains_only_jars": true,
+    "baseline_snapshot_hashes_match": true,
+    "source_inventory_verification_passes": true,
+    "independent_inventory_checks_pass": true,
+    "source_manifest_hashes_match": true,
+    "acl_archive_unchanged": true,
+    "relocated_python_syntax_valid": true
+  },
+  "all_checks_pass": true,
+  "independent_check_count": 25,
+  "transfer_files": 46863,
+  "transfer_bytes": 3678594091,
+  "python_syntax_files": 21,
+  "source_counts": {
+    "products": 1450,
+    "cards": 8261,
+    "product_cards": 36091
+  },
+  "not_run": [
+    "native probes",
+    "Gradle build",
+    "Minecraft client/server",
+    "network collection"
+  ]
+}

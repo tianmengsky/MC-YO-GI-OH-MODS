@@ -1,0 +1,135 @@
+{
+  "audited_at": "2026-10-15T02:13:33.610181+00:00",
+  "scope": "Read-only consistency audit of the delivered source corpus; not proof that live official catalogs list all historical products.",
+  "counts": {
+    "products": 1450,
+    "cards": 8261,
+    "product_cards": 36091
+  },
+  "checks": {
+    "sqlite_quick_check": true,
+    "unique_product_keys": true,
+    "unique_card_keys": true,
+    "unique_product_row_ordinals": true,
+    "no_orphan_product_memberships": true,
+    "no_orphan_card_memberships": true,
+    "all_products_complete": true,
+    "all_product_counts_verified": true,
+    "all_membership_counts_match_products": true,
+    "all_distinct_counts_match_products": true,
+    "no_exact_release_after_cutoff": true,
+    "no_sentinel_as_exact_release": true,
+    "year_only_scope_has_evidence": true,
+    "official_product_sources": true,
+    "coverage_total_matches_database": true,
+    "csv_exports_match_database": true,
+    "coverage_locales_match_database": true,
+    "sampled_cache_hashes_and_memberships_match": true,
+    "mapping_covers_official_cards_once": true,
+    "verified_mappings_have_engine_data": true,
+    "no_link_monsters_in_engine_pool": true,
+    "usage_flags_cover_all_cids": true,
+    "unresolved_cids_equal_explicit_restricted_cids": true,
+    "engine_rule_fields_match_local_database": true,
+    "official_jp_verified_pool_matches_existing_md_pool": true
+  },
+  "all_checks_pass": true,
+  "locales": [
+    {
+      "locale": "en",
+      "products": 595,
+      "complete": 595,
+      "uncertain_exact_dates": 46
+    },
+    {
+      "locale": "ja",
+      "products": 855,
+      "complete": 855,
+      "uncertain_exact_dates": 0
+    }
+  ],
+  "sampled_cached_pages": [
+    {
+      "product_id": "en:11101000",
+      "name": "LEGEND OF BLUE EYES WHITE DRAGON",
+      "expected_rows": 126,
+      "sha256_matches_cache_metadata": true,
+      "source_url_matches_metadata": true,
+      "html_cids_match_database": true,
+      "html_unique_cids": 126
+    },
+    {
+      "product_id": "ja:1000004892000",
+      "name": "Yu-Gi-Oh! WORLD CHAMPIONSHIP 2015 来場者特典カード",
+      "expected_rows": 2,
+      "sha256_matches_cache_metadata": true,
+      "source_url_matches_metadata": true,
+      "html_cids_match_database": true,
+      "html_unique_cids": 2
+    },
+    {
+      "product_id": "ja:1119003",
+      "name": "マキシマム・クライシス [ MAXIMUM CRISIS ]",
+      "expected_rows": 80,
+      "sha256_matches_cache_metadata": true,
+      "source_url_matches_metadata": true,
+      "html_cids_match_database": true,
+      "html_unique_cids": 80
+    },
+    {
+      "product_id": "ja:2201048",
+      "name": "ストラクチャーデッキＲ － 恐獣の鼓動 －",
+      "expected_rows": 39,
+      "sha256_matches_cache_metadata": true,
+      "source_url_matches_metadata": true,
+      "html_cids_match_database": true,
+      "html_unique_cids": 39
+    }
+  ],
+  "unknown_exact_release_dates": 46,
+  "missing_collection_numbers": 36091,
+  "unknown_physical_quantities": 36091,
+  "mapping_audit": {
+    "status": "reviewed_available_tables",
+    "verified_engine_codes": 8231,
+    "jp_verified_engine_codes": 8201,
+    "existing_md_pool": 8201,
+    "unresolved_cids": 30,
+    "explicit_restricted_cids": 30,
+    "global_additions_vs_md": [
+      4474060,
+      5697558,
+      16719140,
+      20584712,
+      21607304,
+      22829942,
+      27642961,
+      28369508,
+      30979619,
+      39373426,
+      39581190,
+      41091257,
+      42713844,
+      43930492,
+      53989821,
+      54631665,
+      64753157,
+      65976795,
+      66698383,
+      68001309,
+      68823957,
+      78080961,
+      78202553,
+      79324191,
+      91258852,
+      92092092,
+      92970404,
+      94096018,
+      95218695,
+      96334243
+    ],
+    "md_only_vs_official_jp": [],
+    "engine_rule_field_mismatches": [],
+    "qualification": "Mappings use corroborated third-party double IDs, not an official KONAMI passcode API."
+  }
+}

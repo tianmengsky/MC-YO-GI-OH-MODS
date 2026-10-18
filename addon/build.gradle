@@ -1,0 +1,208 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '6.0.54'
+}
+group = 'dev.codex'
+version = '0.6.33-alpha'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+    runs {
+        configureEach {
+            workingDirectory project.file('../run-client')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'info'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', file('build/createSrgToMcp/output.srg').absolutePath
+            args '--mixin', 'yugioh_mdpro_addon.mixins.json'
+            args '--mixin', 'yugioh_interaction_fix.mixins.json'
+            mods { yugioh_mdpro_addon { source sourceSets.main } }
+        }
+        client {
+            workingDirectory project.file('../run-client')
+            if (project.hasProperty('visualSmoke')) {
+                property 'yugioh.mdpro.visualSmoke', 'true'
+                args '--width', '1280', '--height', '900'
+            }
+            if (project.hasProperty('uiSmoke')) {
+                property 'yugioh.mdpro.uiSmoke', 'true'
+                args '--width', '1653', '--height', '1202'
+                // Dedicated game directory: the duel GUI fixture must not see whatever jars another
+                // session copied into run-client/mods.
+                workingDirectory project.file('../run-ui')
+            }
+            if (project.hasProperty('catalogSmoke')) {
+                // Same display fixture as -PvisualSmoke, in a game directory whose mods folder is
+                // empty so a deployed integrated jar cannot shadow the development classes.
+                property 'yugioh.mdpro.visualSmoke', 'true'
+                args '--width', '1280', '--height', '900'
+                workingDirectory project.file('../run-catalog')
+            }
+            if (project.hasProperty('deckSmoke')) {
+                // Renders the rebuilt deck editor layout alone and captures it, in the same isolated
+                // game directory used by the catalog fixture.
+                property 'yugioh.mdpro.deckSmoke', 'true'
+                args '--width', '1600', '--height', '1000'
+                workingDirectory project.file('../run-catalog')
+            }
+        }
+        server { workingDirectory project.file('../run-server') }
+        gameTestServer {
+            workingDirectory project.file(project.findProperty('gameTestDir') ?: '../run-server')
+            property 'forge.enabledGameTestNamespaces', 'yugioh_mdpro_addon'
+            // Without an explicit heap the JVM picks a quarter of physical RAM (about 4 GiB on this
+            // 16 GiB machine) and the JIT arenas then die with a native malloc failure while the
+            // Gradle build JVM is still alive. These caps keep the run inside the machine; the heap
+            // is overridable because the Windows commit limit is shared with whatever else is running.
+            jvmArgs "-Xmx${project.findProperty('gameTestHeap') ?: '2G'}", '-Xms128m',
+                    '-XX:+UseSerialGC', '-XX:ReservedCodeCacheSize=96m', '-XX:MaxMetaspaceSize=384m'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    flatDir { dirs '../generated/deps' }
+}
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.10'
+    implementation 'net.java.dev.jna:jna:5.12.1'
+    implementation fg.deobf('local:yugioh:1.0.0')
+    implementation fg.deobf('local:yugioh-interaction-fix:0.103.2-mdpro')
+    implementation fg.deobf('local:ygostar:1.0.0')
+    implementation fg.deobf('local:geckolib:4.8.4')
+}
+configurations { verifierRuntime }
+dependencies { verifierRuntime 'net.java.dev.jna:jna:5.12.1' }
+
+tasks.register('verifierJar', Jar) {
+    dependsOn compileJava
+    archiveFileName = 'mdpro-verifier.jar'
+    destinationDirectory = layout.buildDirectory.dir('verifier')
+    from(tasks.named('compileJava').map { it.destinationDirectory }) {
+        include 'dev/codex/yugiohmdpro/engine/**'
+    }
+    from { configurations.verifierRuntime.collect { zipTree(it) } }
+    exclude 'META-INF/*.SF', 'META-INF/*.RSA', 'META-INF/*.DSA'
+    manifest { attributes 'Main-Class': 'dev.codex.yugiohmdpro/engine/NativeProbe'.replace('/', '.') }
+}
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    exclude 'assets/yugioh_interaction_fix/3d/**'
+    // Generated inventory overrides the former date-only admission list.
+    exclude 'data/yugioh_mdpro_addon/duel-catalog.json'
+}
+sourceSets.main.resources {
+    srcDir '../generated/content/resources'
+    srcDir '../generated/reference-host-resources'
+}
+processResources {
+    // Explicit copy keeps the reviewed inventory first, including its admission table.
+    doLast {
+        copy {
+            from '../generated/content/resources/data/yugioh_mdpro_addon/duel-catalog.json'
+            into destinationDir.toPath().resolve('data/yugioh_mdpro_addon').toFile()
+        }
+    }
+    from(tasks.named('verifierJar')) { into 'META-INF' }
+}
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+jar {
+    manifest {
+        attributes([
+            'Specification-Title': 'Yu-Gi-Oh MDPro3 Addon',
+            'Specification-Vendor': 'Codex',
+            'Specification-Version': '1',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.jar.archiveVersion,
+            'Implementation-Vendor': 'Codex'
+            , 'MixinConfigs': 'yugioh_mdpro_addon.mixins.json'
+        ])
+    }
+}
+jar.finalizedBy('reobfJar')
+
+// A single installation archive, retaining all four original Forge mod identities.
+// The reviewed input digests live in content/integrated-release.json.
+tasks.register('integratedRelease', Exec) {
+    dependsOn 'reobfJar'
+    workingDir rootProject.projectDir.parentFile
+    environment 'PYTHONIOENCODING', 'utf-8'
+    commandLine 'python', 'addon/tools/package_integrated.py', 'build'
+}
+
+tasks.register('nativeSmoke', JavaExec) {
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.NativeProbe'
+    workingDir rootProject.projectDir.parentFile
+    args file('../generated/native-runtime').absolutePath
+    systemProperty 'jna.tmpdir', file('../generated/tmp').absolutePath
+}
+tasks.register('gameplaySmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.GameplaySmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+    systemProperty 'jna.tmpdir', file('../generated/tmp').absolutePath
+}
+tasks.register('historicalPoolSmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.HistoricalPoolSmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+    systemProperty 'jna.tmpdir', file('../generated/tmp').absolutePath
+}
+
+tasks.register('reliabilitySmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.ReliabilitySmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+    systemProperty 'jna.tmpdir', file('../generated/tmp').absolutePath
+}
+
+tasks.register('maxxCSmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.MaxxCSmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+    systemProperty 'jna.tmpdir', file('../generated/tmp').absolutePath
+}
+
+tasks.register('referenceHostSmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.ReferenceHostSmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+}
+
+tasks.register('termuxHostSmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.TermuxHostSmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+}
+
+// Presentation pacing against the real host: beat-per-visible-action, fold rules, hold table.
+tasks.register('pacingSmoke', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.codex.yugiohmdpro.engine.PacingSmoke'
+    workingDir rootProject.projectDir.parentFile
+    args rootProject.projectDir.parentFile.absolutePath
+}
+
+

@@ -1,0 +1,12 @@
+# 仓库内含中文、日文、英文混合文件以及少量历史编码文件，
+# 不做任何换行符或编码改写：一律按原始字节存储与检出。
+* -text
+
+# 二进制资源：不做文本 diff
+*.png binary
+*.jpg binary
+*.jar binary
+*.zip binary
+*.nbt binary
+*.sqlite binary
+*.hprof binary

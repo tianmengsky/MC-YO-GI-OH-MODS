@@ -1,0 +1,30 @@
+{
+  "market": "ja",
+  "legacy_reuse": {
+    "ja:1107000": "yugioh:booster_sod",
+    "ja:1107001": "yugioh:booster_rds",
+    "ja:1107002": "yugioh:booster_fet",
+    "ja:1107003": "yugioh:booster_tlm",
+    "ja:1108000": "yugioh:booster_crv",
+    "ja:1108001": "yugioh:booster_een",
+    "ja:1108002": "yugioh:booster_soi",
+    "ja:1108003": "yugioh:booster_eoj",
+    "ja:1109000": "yugioh:booster_potd",
+    "ja:2201008": "yugioh:structure_deck_dragons_roar",
+    "ja:2201009": "yugioh:structure_deck_zombie_madness",
+    "ja:2201010": "yugioh:structure_deck_blaze_of_destruction",
+    "ja:2201011": "yugioh:structure_deck_fury_from_the_deep",
+    "ja:2201012": "yugioh:structure_deck_warriors_triumph",
+    "ja:2201013": "yugioh:structure_deck_spellcasters_judgment",
+    "ja:2201014": "yugioh:structure_deck_invincible_fortress",
+    "ja:2201015": "yugioh:structure_deck_lord_of_the_storm",
+    "ja:2202000": "yugioh:structure_deck_starter_deck_2006"
+  },
+  "bundled_products": ["ja:3306000", "ja:3306001", "ja:3306002", "ja:3306003", "ja:3306004", "ja:3306005", "ja:3306006", "ja:3310004"],
+  "notes": [
+    "Explicit release identity mapping; no fuzzy name or card-overlap deduplication.",
+    "Early overseas composite boosters and overseas Yugi/Kaiba starter decks remain registered for saves but have no current sale or creative entry.",
+    "Reused original structure decks keep their original award recipes and existing boxes unchanged. Japanese product identity and cover are used for display.",
+    "Tin/box/collection bundles are not standalone booster products."
+  ]
+}

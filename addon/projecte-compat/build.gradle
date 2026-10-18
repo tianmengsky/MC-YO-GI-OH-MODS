@@ -1,0 +1,16 @@
+plugins { id 'net.minecraftforge.gradle' version '6.0.54' }
+group = 'dev.codex'
+version = '1.0.0'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+minecraft { mappings channel: 'official', version: '1.20.1' }
+repositories { mavenCentral(); flatDir { dirs '../../generated/deps' } }
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.28'
+    compileOnly fg.deobf('local:ProjectE:1.20.1-PE1.0.1')
+    compileOnly fg.deobf('local:yugioh:1.0.0')
+}
+if (project.hasProperty('compatSmoke')) sourceSets.main.java.srcDir 'src/smoke/java'
+tasks.withType(AbstractArchiveTask).configureEach { preserveFileTimestamps = false; reproducibleFileOrder = true }
+jar { manifest { attributes 'MixinConfigs': 'yugioh_projecte.mixins.json', 'Implementation-Version': project.version } }
+jar.finalizedBy('reobfJar')

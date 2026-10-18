@@ -1,0 +1,128 @@
+{
+  "path_map": {
+    "F:\\Minecarft\\MC游戏王1.20.1\\.minecraft\\versions\\1.20.1-Forge_47.4.10\\mods\\游戏王重构-HANDOVER-初步诊断与目标清单-v1.md": "F:\\Minecarft\\游戏王mod工作区\\docs\\游戏王重构-HANDOVER-初步诊断与目标清单-v1.md",
+    "F:\\Minecarft\\MC游戏王1.20.1\\.minecraft\\versions\\1.20.1-Forge_47.4.10\\_ygo-analysis": "F:\\Minecarft\\游戏王mod工作区\\_ygo-analysis",
+    "F:\\MyCardLibrary\\mdpro3-p0": "F:\\Minecarft\\游戏王mod工作区\\mdpro3-p0",
+    "F:\\MyCardLibrary\\yugioh-mdcore-addon": "F:\\Minecarft\\游戏王mod工作区\\addon",
+    "F:\\MyCardLibrary\\mdpro3": "F:\\Minecarft\\游戏王mod工作区\\inputs\\mdpro3",
+    "F:\\Minecarft\\MC游戏王1.20.1\\.minecraft\\versions\\1.20.1-Forge_47.4.10\\mods": "F:\\Minecarft\\游戏王mod工作区\\inputs\\mods"
+  },
+  "changed_files": [
+    {
+      "path": "docs\\游戏王重构-HANDOVER-初步诊断与目标清单-v1.md",
+      "original_sha256": "566dfd4fcedc2b0ad07b4c2a45c999071b8cdbaf6102ae4e6e02fbc7b45f2700",
+      "updated_sha256": "364f216aa73b056bd9f2e8ce80e7375c1909f132b0fba5348eeeecbde9fc442c"
+    },
+    {
+      "path": "mdpro3-p0\\ffi-extract\\extract_raw.py",
+      "original_sha256": "fdb866298c03b714d9d6fdbb4ac2a0e25862a07e43d8a11dab5ef3ca17d8c324",
+      "updated_sha256": "103c4a01399e774eef067e643e444d474e92a25658cf1cc6ce04da2f6f05dd26"
+    },
+    {
+      "path": "mdpro3-p0\\ffi-extract\\extract_signatures.py",
+      "original_sha256": "e5c08fdf9d5ab12e7110af9db30af94f6fa88df1b629a8d6c7cfb7540e55cc69",
+      "updated_sha256": "7b3691f40bc064a322d48c18a36fa3f0f17f02dcc6776bb1f97d96141e54c890"
+    },
+    {
+      "path": "mdpro3-p0\\ffi-extract\\inspect_meta.py",
+      "original_sha256": "76f169c0eb066666b9faa2151dcabc76a575e0f613955c951be6b84c449325b5",
+      "updated_sha256": "3d6b8a666c596b325d3994fce60b3ddb2d646ab18f7e337bc9e172c499c262a4"
+    },
+    {
+      "path": "mdpro3-p0\\ffi-extract\\核查结论-2026-10-15.md",
+      "original_sha256": "37d7c423babd4d0963ee618e54e22b23e7c0bdfed817c3c4ab93c3ea8c6f15c8",
+      "updated_sha256": "66bf1f5bd0173dfafac5980f8f127d413d3f7d3b3ba0178471fa8bd10ebefcd7"
+    },
+    {
+      "path": "mdpro3-p0\\HANDOVER-初步诊断与目标清单-v1.md",
+      "original_sha256": "566dfd4fcedc2b0ad07b4c2a45c999071b8cdbaf6102ae4e6e02fbc7b45f2700",
+      "updated_sha256": "364f216aa73b056bd9f2e8ce80e7375c1909f132b0fba5348eeeecbde9fc442c"
+    },
+    {
+      "path": "mdpro3-p0\\step1_load.py",
+      "original_sha256": "53cec2c7de4eeb6a8f617317a3b4b7947d71db940c29955817a278332ccb474f",
+      "updated_sha256": "7baea3f1d39ffd6e80ef0c5bf28d95112786848b549215be21b21eee078de671"
+    },
+    {
+      "path": "mdpro3-p0\\step2_callbacks.py",
+      "original_sha256": "2ea2f92c33fb782d00bf6672415643e1f1ec789600939e2423309a06104b5573",
+      "updated_sha256": "f3b44176493a07c465e8761fb08f99cf90aeb7d77177a83ed7a37a6099769314"
+    },
+    {
+      "path": "mdpro3-p0\\step3_probe_sig.py",
+      "original_sha256": "399d7f76309e612200f4e6235d8600f90f6060b5a8f19dd4b4dd67a857ed4912",
+      "updated_sha256": "be0c6808e932c6982133ab70b99bfb7680edb363326ca4fd2c7404871cb4a5e0"
+    },
+    {
+      "path": "mdpro3-p0\\step4_duel.py",
+      "original_sha256": "8fd6ff75b9d5040c409cf3c0fd6465a853a9c1d11050caa447b949011e01a18e",
+      "updated_sha256": "0dcbbdc938d8b8ddd804ecdb45c99a597eccdd25387179c946ad6f086d64069a"
+    },
+    {
+      "path": "mdpro3-p0\\step5_carddata.py",
+      "original_sha256": "e6bf25c1842e1e377abb59b45a16561829ccd85825785fb0de555b55900277df",
+      "updated_sha256": "4530882a90d5503a3048961074472cfb826c8e832f60e9f431418d4127a51099"
+    },
+    {
+      "path": "mdpro3-p0\\step6_minimal.py",
+      "original_sha256": "ecf9d123251006c4a705deb244d70d1c7fe06453a65b6d11c264e40e0ada0f5c",
+      "updated_sha256": "95f60bde717f45274704b57de4770ea22f602ad61930601bfbb38a6aa7cfa125"
+    },
+    {
+      "path": "mdpro3-p0\\step7_duel_full.py",
+      "original_sha256": "7ea5d5e2126d61b76ab230be9c3c779d29214502243ca606cf7bdaa43b7c91c3",
+      "updated_sha256": "80aa862bdf37c7d170b903d8dbcbc47ad523994cf72bfa61d43f7209c2fd3f41"
+    },
+    {
+      "path": "mdpro3-p0\\step8_layouts.py",
+      "original_sha256": "d2e84a051dc9fbcd6f486bf28bb614bcbd469543d0eb32ae7f56a6e9428776b8",
+      "updated_sha256": "d57d3b60b75c93336d2fcb0a14a402cd20dd4116a3a28f61a42c8c23b6c3e84b"
+    },
+    {
+      "path": "mdpro3-p0\\step9_verify.py",
+      "original_sha256": "0f70ade2a8e334613b2184fc388928cc5004d421056e5131e696fee3c61f22fe",
+      "updated_sha256": "d0d2f9a38f2af2a88dcf74d7856f373a13164026f59993d1ca74bedc5c2958cf"
+    },
+    {
+      "path": "_ygo-analysis\\execution-plan\\audit_source_inventory.py",
+      "original_sha256": "72f182fae09c824e856e63a9265e28cec7880322be08423eae664daf481ec275",
+      "updated_sha256": "cacadf8e65a6e08f490df4b0c89f2c6bb7eb846a329602904205f44a60691e6d"
+    },
+    {
+      "path": "_ygo-analysis\\execution-plan\\baseline-manifest.json",
+      "original_sha256": "dadd7d86410837de3cf79ba44b60f6c89619fda9fe6fca2e915a40b4d56a9fc6",
+      "updated_sha256": "b6a7da84bbe7baccc4136cdbded3dc558122730eb7841584aa732cf1e2247e08"
+    },
+    {
+      "path": "_ygo-analysis\\execution-plan\\游戏王扩展-详细任务计划步骤书-v1.md",
+      "original_sha256": "a1f6930c1e3a69bcc7bf27ce6b8011ce9372d8f9cc02bffd9173cdfff14efde2",
+      "updated_sha256": "b11d430b6291ea5ca6abb67330b14bb3ba7acac0b0988bfa5d492497a62ea85e"
+    },
+    {
+      "path": "_ygo-analysis\\source-data\\pack-inventory\\.mapping-preview\\mapping_coverage.json",
+      "original_sha256": "bd0e03a489ec2b9defcb3be5f651098dd1e0c54c7bba081d5ad022ec124b3076",
+      "updated_sha256": "6d67dd3e4acffc780871322c665084f118a665ce99a5a168f938662f82d4a6e0"
+    },
+    {
+      "path": "_ygo-analysis\\source-data\\pack-inventory\\build_mapping.py",
+      "original_sha256": "5cf016e974229082a46cd7b5156e7c745e0ec7b0375d3f06901ccb15fb139590",
+      "updated_sha256": "302ef4a32c43927af43d20f32f83ae2f38518376ebaa499dc6658915b3cb1acb"
+    },
+    {
+      "path": "_ygo-analysis\\source-data\\pack-inventory\\compare_pools.py",
+      "original_sha256": "dab1c86a0e6ad0f6e7f014140e6d8cf926b69249200c6f6ce8732173ae3c5ba7",
+      "updated_sha256": "2c9035fb6ce9aa2fc24427515d45245e5fa55cd610cc255e92bece843ae2fc82"
+    },
+    {
+      "path": "_ygo-analysis\\source-data\\pack-inventory\\mapping_coverage.json",
+      "original_sha256": "04e7e25b3c003c32efd10de802717e75b5b0475e3c8888fd95a109dbf3b56c64",
+      "updated_sha256": "41c4a1f2d8f61a010091250d245b68ba28c819c59e4004df3ed6120ea6011dac"
+    },
+    {
+      "path": "_ygo-analysis\\source-data\\pack-inventory\\pool_comparison.json",
+      "original_sha256": "61e1687f96f2321cbefdc3a8fddca82d5f98a50a42ac33edd8ef03f8610c3186",
+      "updated_sha256": "8992db17a596b2ebd52670b1507f39acb45cb61c13a297feccf91a10e4c77527"
+    }
+  ],
+  "historical_logs_and_acl_untouched": true
+}

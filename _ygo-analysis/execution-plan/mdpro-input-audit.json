@@ -1,0 +1,128 @@
+{
+  "scope": "MDPro3 existing first-record date filter only, not the official inventory-derived final card pool. Exact filename checks do not assess visual identity or script runtime correctness.",
+  "cutoff": "2017-03-24",
+  "database_cards": 14981,
+  "undated_cards": 763,
+  "script_archive_entries": 13540,
+  "public_script_sizes": {
+    "script/constant.lua": 48412,
+    "script/procedure.lua": 87095,
+    "script/utility.lua": 66473
+  },
+  "counts": {
+    "all": {
+      "cards": 8201,
+      "art_exact_filename": 8201,
+      "closeup_exact_filename": 6352,
+      "own_lua_present": 7558,
+      "own_or_alias_lua_present": 7558
+    },
+    "monsters": {
+      "cards": 5458,
+      "art_exact_filename": 5458,
+      "closeup_exact_filename": 5444,
+      "own_lua_present": 4815,
+      "own_or_alias_lua_present": 4815
+    },
+    "spells": {
+      "cards": 1495,
+      "art_exact_filename": 1495,
+      "closeup_exact_filename": 538,
+      "own_lua_present": 1495,
+      "own_or_alias_lua_present": 1495
+    },
+    "traps": {
+      "cards": 1248,
+      "art_exact_filename": 1248,
+      "closeup_exact_filename": 370,
+      "own_lua_present": 1248,
+      "own_or_alias_lua_present": 1248
+    },
+    "normal_non_pendulum_monsters": {
+      "cards": 643,
+      "art_exact_filename": 643,
+      "closeup_exact_filename": 643,
+      "own_lua_present": 0,
+      "own_or_alias_lua_present": 0
+    },
+    "pendulum": {
+      "cards": 207,
+      "art_exact_filename": 207,
+      "closeup_exact_filename": 207,
+      "own_lua_present": 207,
+      "own_or_alias_lua_present": 207
+    }
+  },
+  "monsters_without_exact_closeup": [
+    {
+      "id": 29951323,
+      "name": "放电枪野马",
+      "alias": 0
+    },
+    {
+      "id": 40672993,
+      "name": "避雷神",
+      "alias": 0
+    },
+    {
+      "id": 45801022,
+      "name": "电气狐猴",
+      "alias": 0
+    },
+    {
+      "id": 48009503,
+      "name": "英豪冠军 英弓王",
+      "alias": 0
+    },
+    {
+      "id": 49202331,
+      "name": "混沌超量 超巨大空中要塞 宝比伦号",
+      "alias": 0
+    },
+    {
+      "id": 56346071,
+      "name": "图腾五星",
+      "alias": 0
+    },
+    {
+      "id": 57996334,
+      "name": "怒怒怒破坏者",
+      "alias": 0
+    },
+    {
+      "id": 68625727,
+      "name": "占术姬 花瓣精灵",
+      "alias": 0
+    },
+    {
+      "id": 74367458,
+      "name": "守护者·艾尔玛",
+      "alias": 0
+    },
+    {
+      "id": 74593218,
+      "name": "英豪冠军 草薙剑王",
+      "alias": 0
+    },
+    {
+      "id": 75253697,
+      "name": "No.72 行列怪兽 战车之飞车",
+      "alias": 0
+    },
+    {
+      "id": 83274244,
+      "name": "怒怒怒战士",
+      "alias": 0
+    },
+    {
+      "id": 86889202,
+      "name": "番犬-戴表看门狗",
+      "alias": 0
+    },
+    {
+      "id": 93353691,
+      "name": "不退的荒武者",
+      "alias": 0
+    }
+  ]
+}

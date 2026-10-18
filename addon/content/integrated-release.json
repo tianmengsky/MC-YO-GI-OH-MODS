@@ -1,0 +1,40 @@
+{
+  "version": "0.6.33-alpha",
+  "network_protocol": 8,
+  "output": "addon/build/libs/yugioh-mdpro-integrated-0.6.33-alpha.jar",
+  "previous_integrated": {
+    "installed_name": "yugioh-mdpro-integrated-0.6.32-alpha.jar",
+    "sha256": "411f5dd998980a31240d22b5dd3580dc42277060bbd8c0b95a9bc9b75a550658"
+  },
+  "outer": {
+    "source": "addon/build/libs/yugioh-mdpro-addon-0.6.33-alpha.jar",
+    "installed_name": "yugioh-mdpro-addon-0.6.33-alpha.jar",
+    "sha256": "1d4a433633cd30b8e8c1cd7d215272d2bd3d383da55d0b04773828c9220b2f3f"
+  },
+  "nested": [
+    {
+      "source": "generated/deps/ygostar-1.0.0.jar",
+      "installed_name": "ygostar-1.0.0.jar",
+      "artifact": "ygostar",
+      "version": "1.0.0",
+      "sha256": "a7e61cdac8fc8aa9c0232f08b1ffa6239f56d263470b6026c750a3dfe1f74de0"
+    },
+    {
+      "source": "generated/deps/yugioh-1.0.0.jar",
+      "installed_name": "yugioh-1.0.0-缁犫偓娑擃參鍣哥拠?jar",
+      "artifact": "yugioh",
+      "version": "1.0.0",
+      "sha256": "f3be267a4719e6eafd09983541b7432efaa7f2de85c4ee9fb192980b8357d725"
+    },
+    {
+      "source": "generated/deps/yugioh-interaction-fix-0.103.2-mdpro.jar",
+      "installed_name": "yugioh-interaction-fix-0.103.2-mdpro.jar",
+      "artifact": "yugioh-interaction-fix",
+      "version": "0.103.2-mdpro",
+      "sha256": "f759c7a79aa089372410ee3c8ba19768234133817cc0c3927cb3855261315846"
+    }
+  ],
+  "external": {
+    "geckolib-4.8.4.jar": "c04abba4fd354dd8c0e8a732f1f05f4dca893d2e1d962b2ab128bbd411478747"
+  }
+}

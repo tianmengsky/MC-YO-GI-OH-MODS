@@ -1,0 +1,10 @@
+{
+  "report": "F:\\Minecarft\\游戏王mod工作区\\_ygo-analysis\\execution-plan\\source-data-independent-audit.json",
+  "counts": {
+    "products": 1450,
+    "cards": 8261,
+    "product_cards": 36091
+  },
+  "all_checks_pass": true,
+  "failed_checks": []
+}

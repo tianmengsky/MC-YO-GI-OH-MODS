@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.codex.yugiohmaid.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MatchStartMixin",
+    "MatchFormatsMixin"
+  ],
+  "client": ["MaidPuppetMixin", "MaidAnimationMixin"],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

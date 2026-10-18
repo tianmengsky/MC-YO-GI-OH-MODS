@@ -1,0 +1,30 @@
+TYPE YGOSharp.OCGWrapper.Card+CardData
+FIELD Code int32
+FIELD Alias int32
+FIELD Setcode int64
+FIELD Type int32
+FIELD Level int32
+FIELD Attribute int32
+FIELD Race int32
+FIELD Attack int32
+FIELD Defense int32
+FIELD LScale int32
+FIELD RScale int32
+FIELD LinkMarker int32
+TYPE Percy.CardData
+FIELD Code int32
+FIELD Alias int32
+FIELD Setcode Percy.CardData+<Setcode>e__FixedBuffer
+ATTRIBUTE .ctor 01005953797374656d2e496e7431362c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839100000000000
+FIELD Type int32
+FIELD Level int32
+FIELD Attribute int32
+FIELD Race int32
+FIELD Attack int32
+FIELD Defense int32
+FIELD LScale int32
+FIELD RScale int32
+FIELD LinkMarker int32
+TYPE Percy.CardData+<Setcode>e__FixedBuffer
+LAYOUT 0 32
+FIELD FixedElementField int16

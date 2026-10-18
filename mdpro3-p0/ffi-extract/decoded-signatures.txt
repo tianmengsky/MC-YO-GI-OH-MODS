@@ -1,0 +1,93 @@
+YGOSharp.OCGWrapper.Api: void set_card_reader(YGOSharp.OCGWrapper.Api+CardReader f) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void set_message_handler(YGOSharp.OCGWrapper.Api+MessageHandler f) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void set_script_reader(YGOSharp.OCGWrapper.Api+ScriptReader f) [flags=0x204]
+YGOSharp.OCGWrapper.Api: intptr create_duel(uint32 seed) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void start_duel(intptr pduel, int32 options) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void end_duel(intptr pduel) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void set_player_info(intptr pduel, int32 playerid, int32 lp, int32 startcount, int32 drawcount) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void new_card(intptr pduel, uint32 code, uint8 owner, uint8 playerid, uint8 location, uint8 sequence, uint8 position) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void new_tag_card(intptr pduel, uint32 code, uint8 owner, uint8 location) [flags=0x204]
+YGOSharp.OCGWrapper.Api: int32 process(intptr pduel) [flags=0x204]
+YGOSharp.OCGWrapper.Api: int32 get_message(intptr pduel, intptr buf) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void get_log_message(intptr pduel, intptr buf) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void set_responseb(intptr pduel, intptr buf) [flags=0x204]
+YGOSharp.OCGWrapper.Api: void set_responsei(intptr pduel, uint32 value) [flags=0x204]
+YGOSharp.OCGWrapper.Api: int32 query_card(intptr pduel, uint8 playerid, uint8 location, uint8 sequence, int32 queryFlag, intptr buf, int32 useCache) [flags=0x204]
+YGOSharp.OCGWrapper.Api: int32 query_field_count(intptr pduel, uint8 playerid, uint8 location) [flags=0x204]
+YGOSharp.OCGWrapper.Api: int32 query_field_card(intptr pduel, uint8 playerid, uint8 location, int32 queryFlag, intptr buf, int32 useCache) [flags=0x204]
+YGOSharp.OCGWrapper.Api: int32 query_field_info(intptr pduel, intptr buf) [flags=0x204]
+Percy.Dll: void set_card_reader(Percy.Dll+CardReader f) [flags=0x204]
+Percy.Dll: void set_message_handler(Percy.Dll+MessageHandler f) [flags=0x204]
+Percy.Dll: void set_script_reader(Percy.Dll+ScriptReader f) [flags=0x204]
+Percy.Dll: intptr create_duel(uint32 seed) [flags=0x204]
+Percy.Dll: intptr create_duel_v2(uint32[] seeds) [flags=0x204]
+Percy.Dll: void start_duel(intptr pduel, uint32 options) [flags=0x204]
+Percy.Dll: int32 get_ai_going_first_second(intptr pduel, intptr deckname) [flags=0x204]
+Percy.Dll: int32 set_player_going_first_second(intptr pduel, int32 first, intptr deckname) [flags=0x204]
+Percy.Dll: void set_ai_id(intptr pduel, int32 playerid) [flags=0x204]
+Percy.Dll: void end_duel(intptr pduel) [flags=0x204]
+Percy.Dll: void set_player_info(intptr pduel, int32 playerid, int32 lp, int32 startcount, int32 drawcount) [flags=0x204]
+Percy.Dll: void new_card(intptr pduel, uint32 code, uint8 owner, uint8 playerid, uint8 location, uint8 sequence, uint8 position) [flags=0x204]
+Percy.Dll: void new_tag_card(intptr pduel, uint32 code, uint8 owner, uint8 location) [flags=0x204]
+Percy.Dll: int32 process(intptr pduel) [flags=0x204]
+Percy.Dll: int32 get_message(intptr pduel, intptr buf) [flags=0x204]
+Percy.Dll: void get_log_message(intptr pduel, uint8[] buf) [flags=0x204]
+Percy.Dll: void set_responseb(intptr pduel, intptr buf) [flags=0x204]
+Percy.Dll: void set_responsei(intptr pduel, uint32 value) [flags=0x204]
+Percy.Dll: int32 query_card(intptr pduel, uint8 playerid, uint8 location, uint8 sequence, int32 queryFlag, intptr buf, int32 useCache) [flags=0x204]
+Percy.Dll: int32 query_field_count(intptr pduel, uint8 playerid, uint8 location) [flags=0x204]
+Percy.Dll: int32 query_field_card(intptr pduel, uint8 playerid, uint8 location, int32 queryFlag, intptr buf, int32 useCache) [flags=0x204]
+Percy.Dll: int32 query_field_info(intptr pduel, intptr buf) [flags=0x204]
+Percy.Dll: int32 preload_script(intptr pduel, intptr script) [flags=0x204]
+
+TYPE YGOSharp.OCGWrapper.Api [flags=0x100181]
+ FIELD string _rootPath
+ FIELD string _scriptDirectory
+ FIELD intptr _buffer
+ FIELD YGOSharp.OCGWrapper.Api+ScriptReader _scriptCallback
+ FIELD YGOSharp.OCGWrapper.Api+CardReader _cardCallback
+ FIELD YGOSharp.OCGWrapper.Api+MessageHandler _messageCallback
+
+TYPE YGOSharp.OCGWrapper.Api+ScriptReader [flags=0x102]
+ CALLBACK intptr Invoke(string scriptName, int32* len)
+ ATTRIBUTE constructor=.ctor value=0100020000000000
+
+TYPE YGOSharp.OCGWrapper.Api+CardReader [flags=0x102]
+ CALLBACK uint32 Invoke(uint32 code, YGOSharp.OCGWrapper.Card+CardData* pData)
+ ATTRIBUTE constructor=.ctor value=0100020000000000
+
+TYPE YGOSharp.OCGWrapper.Api+MessageHandler [flags=0x102]
+ CALLBACK uint32 Invoke(intptr pDuel, uint32 messageType)
+ ATTRIBUTE constructor=.ctor value=0100020000000000
+
+TYPE Percy.CardData [flags=0x100109]
+ FIELD int32 Code
+ FIELD int32 Alias
+ FIELD Percy.CardData+<Setcode>e__FixedBuffer Setcode
+ FIELD int32 Type
+ FIELD int32 Level
+ FIELD int32 Attribute
+ FIELD int32 Race
+ FIELD int32 Attack
+ FIELD int32 Defense
+ FIELD int32 LScale
+ FIELD int32 RScale
+ FIELD int32 LinkMarker
+
+TYPE Percy.Dll [flags=0x100180]
+ FIELD Percy.Ygopro+CardHandler card_handler
+ FIELD Percy.Ygopro+ScriptHandler script_handler
+ FIELD Percy.Ygopro+ChatHandler chat_handler
+ FIELD uint8[] _buffer_2
+
+TYPE Percy.Dll+ScriptReader [flags=0x103]
+ CALLBACK intptr Invoke(string scriptName, int32* len)
+ ATTRIBUTE constructor=.ctor value=0100020000000000
+
+TYPE Percy.Dll+CardReader [flags=0x103]
+ CALLBACK uint32 Invoke(uint32 code, Percy.CardData* pData)
+ ATTRIBUTE constructor=.ctor value=0100020000000000
+
+TYPE Percy.Dll+MessageHandler [flags=0x103]
+ CALLBACK uint32 Invoke(intptr pDuel, uint32 messageType)
+ ATTRIBUTE constructor=.ctor value=0100020000000000

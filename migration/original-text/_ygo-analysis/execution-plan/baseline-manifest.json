@@ -1,0 +1,52 @@
+{
+  "recorded_date": "2026-10-15",
+  "minecraft": "1.20.1",
+  "forge": "47.4.10",
+  "files": [
+    {
+      "path": "F:\\Minecarft\\MC游戏王1.20.1\\.minecraft\\versions\\1.20.1-Forge_47.4.10\\mods\\yugioh-1.0.0-简中重译.jar",
+      "bytes": 168590971,
+      "sha256": "f3be267a4719e6eafd09983541b7432efaa7f2de85c4ee9fb192980b8357d725"
+    },
+    {
+      "path": "F:\\Minecarft\\MC游戏王1.20.1\\.minecraft\\versions\\1.20.1-Forge_47.4.10\\mods\\ygostar-1.0.0-forge-1.20.1 (3).jar",
+      "bytes": 44688746,
+      "sha256": "a7e61cdac8fc8aa9c0232f08b1ffa6239f56d263470b6026c750a3dfe1f74de0"
+    },
+    {
+      "path": "F:\\Minecarft\\MC游戏王1.20.1\\.minecraft\\versions\\1.20.1-Forge_47.4.10\\mods\\yugioh-interaction-fix-0.103.2.jar",
+      "bytes": 90412414,
+      "sha256": "8b3bed3d16e2a15297e6e193b9f986e316c7051e917ee64a92c95a671a663e17"
+    },
+    {
+      "path": "F:\\MyCardLibrary\\mdpro3\\MDPro3_Data\\Managed\\Assembly-CSharp.dll",
+      "bytes": 6479360,
+      "sha256": "d80ff20eecfca01b4f34ad85ab14d2817ea57babf1b5fdd22296caf4467bd9bf"
+    },
+    {
+      "path": "F:\\MyCardLibrary\\mdpro3\\MDPro3_Data\\Plugins\\x86_64\\ocgcore.dll",
+      "bytes": 1683456,
+      "sha256": "d0852134e61bb4b97d770156e8bd4e3f4c57687956e6b69ad690b0de7f05f42d"
+    },
+    {
+      "path": "F:\\MyCardLibrary\\mdpro3\\Data\\locales\\zh-CN\\cards.cdb",
+      "bytes": 8050688,
+      "sha256": "5f13245de4e665450858f66ef2f736a3d2f48cc7f0036961373a96a650cb6797"
+    },
+    {
+      "path": "F:\\MyCardLibrary\\mdpro3\\Data\\pack\\pack.db",
+      "bytes": 1228800,
+      "sha256": "be571b643bacb887bce0ba6089fd5e1dff2d29ea36036b588fb3bccff5f41d0e"
+    },
+    {
+      "path": "F:\\MyCardLibrary\\mdpro3\\Data\\script.zip",
+      "bytes": 13932304,
+      "sha256": "ddd8346886f8d46ca4516361629c591547c942e9e6759a25280813784e2c9a75"
+    }
+  ],
+  "existing_fix_mixins": {
+    "common": 102,
+    "client": 20
+  },
+  "status": "Read-only baseline; no jar replaced or game world changed."
+}

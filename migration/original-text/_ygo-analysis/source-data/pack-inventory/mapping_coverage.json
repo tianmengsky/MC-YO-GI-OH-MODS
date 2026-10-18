@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-10-15T02:12:11.226647+00:00",
+  "status_counts": {
+    "verified_two_sources": 8231,
+    "no_api_identifier": 23,
+    "api_identifier_not_in_mdpro3": 7
+  },
+  "official_card_count": 8261,
+  "api_records_with_konami_id": 14408,
+  "verified_meaning": "Explicit YGOPRODeck konami_id plus id/card_images IDs, available MDPro3 artwork ID, and official Japanese or English name corroboration. Local alias is followed only when name, full current Chinese effect text and core rule stats are identical; API primary ID, resource ID and canonical engine passcode remain separate fields. This is corroborated third-party mapping, not an official KONAMI password API.",
+  "verified_canonical_engine_card_count": 8231,
+  "artwork_alias_resolutions": 29,
+  "local_sources": {
+    "ja-JP": {
+      "path": "F:\\MyCardLibrary\\mdpro3\\Data\\locales\\ja-JP\\cards.cdb",
+      "sha256": "f10355744c4bad0c9bf8121aa179557eab07b2d75b2bd1b0ac6f306ad512397f",
+      "texts_count": 14968
+    },
+    "en-US": {
+      "path": "F:\\MyCardLibrary\\mdpro3\\Data\\locales\\en-US\\cards.cdb",
+      "sha256": "3222dce7f467e862ccd0d5a8c24b7fdf30f7e8d37f413be8f9abab7baa7e0158",
+      "texts_count": 14981
+    },
+    "zh-CN": {
+      "path": "F:\\MyCardLibrary\\mdpro3\\Data\\locales\\zh-CN\\cards.cdb",
+      "sha256": "5f13245de4e665450858f66ef2f736a3d2f48cc7f0036961373a96a650cb6797",
+      "texts_count": 14981
+    }
+  },
+  "candidate_count": 0,
+  "name_only_candidates_are_authoritative": false
+}

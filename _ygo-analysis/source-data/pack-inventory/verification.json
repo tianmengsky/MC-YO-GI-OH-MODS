@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-10-15T02:46:48.521381+00:00",
+  "index_audits": {
+    "ja": {
+      "raw_t_row_count": 1524,
+      "catalog_rows": 1524,
+      "index_parser_skipped_rows": 0,
+      "in_scope": 855,
+      "excluded_after_cutoff": 669,
+      "excluded_uncertain_date": 0,
+      "cached_sha256": "7a12a15f0db93a4c8c8ab9a2582515a7e578b0e486838a7ddcabe84c91d2dcd0",
+      "cached_retrieved_at": "2026-10-15T00:57:13.359066+00:00"
+    },
+    "en": {
+      "raw_t_row_count": 935,
+      "catalog_rows": 935,
+      "index_parser_skipped_rows": 0,
+      "in_scope": 595,
+      "excluded_after_cutoff": 340,
+      "excluded_uncertain_date": 0,
+      "cached_sha256": "34734ee47538ee3c9df4f41e1ddcf56603f980b2b12ff9063cbacf729775fdd3",
+      "cached_retrieved_at": "2026-10-15T00:57:14.875437+00:00"
+    },
+    "cn": {
+      "raw_t_row_count": 172,
+      "catalog_rows": 172,
+      "index_parser_skipped_rows": 0,
+      "in_scope": 0,
+      "excluded_after_cutoff": 172,
+      "excluded_uncertain_date": 0,
+      "cached_sha256": "9da1871dfe31dbed8ba69b7be97f96f20b485de0f420efc5f50962207fff5ec7",
+      "cached_retrieved_at": "2026-10-15T00:59:48.663077+00:00"
+    }
+  },
+  "products_count": 1450,
+  "membership_rows": 36091,
+  "product_cache_provenance_checked": 1450,
+  "duplicate_product_primary_keys": [],
+  "duplicate_membership_ordinal_keys": [],
+  "same_card_multiple_rows_within_product": [],
+  "bad_product_counts": [],
+  "cache_failures": [],
+  "title_review": [],
+  "sqlite_integrity": "ok",
+  "sqlite_counts": {
+    "products": 1450,
+    "cards": 8261,
+    "product_cards": 36091
+  },
+  "passed": true,
+  "note": "Multiple source rows for a CID in one product are retained rather than collapsed; they can represent alternate art. They do not establish physical quantities."
+}

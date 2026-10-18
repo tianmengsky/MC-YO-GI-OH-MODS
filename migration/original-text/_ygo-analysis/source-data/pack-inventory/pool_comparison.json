@@ -1,0 +1,25 @@
+{
+  "cutoff": "2017-03-24",
+  "selected_locales": [
+    "ja",
+    "en",
+    "cn"
+  ],
+  "global_field_scope": "Union of selected official Japanese and English products; Chinese catalog has no in-scope releases. Not all global locales.",
+  "md_single_date_pool_count": 8201,
+  "md_pack_source": "F:\\MyCardLibrary\\mdpro3\\Data\\pack\\pack.db",
+  "md_pack_source_sha256": "be571b643bacb887bce0ba6089fd5e1dff2d29ea36036b588fb3bccff5f41d0e",
+  "official_jp_cids": 8231,
+  "official_global_cids": 8261,
+  "official_jp_verified_passcodes": 8201,
+  "official_global_verified_passcodes": 8231,
+  "md_only_vs_official_jp_verified": 0,
+  "official_jp_verified_only_vs_md": 0,
+  "md_only_vs_official_global_verified": 0,
+  "official_global_verified_only_vs_md": 30,
+  "official_jp_unmapped_cids": 30,
+  "official_global_unmapped_cids": 30,
+  "difference_rows": 30,
+  "warning": "Unmapped official CID may correspond to an MD-only passcode; missing from verified set is not proof of historical ineligibility. Do not change default pool automatically.",
+  "md_filter_limitation": "pack.db has one row per card and is not a complete historical print/product membership relation."
+}

@@ -1,0 +1,33 @@
+INDEX ja: 855 products
+INDEX en: 595 products
+INDEX cn: 0 products
+PROGRESS 50/1450 complete=50 rows=964 cards=944
+PROGRESS 100/1450 complete=100 rows=1810 cards=1687
+PROGRESS 150/1450 complete=150 rows=2957 cards=2518
+PROGRESS 200/1450 complete=200 rows=3809 cards=3159
+PROGRESS 250/1450 complete=250 rows=5114 cards=4019
+PROGRESS 300/1450 complete=300 rows=6628 cards=5025
+PROGRESS 350/1450 complete=350 rows=7774 cards=5723
+PROGRESS 400/1450 complete=400 rows=8525 cards=6070
+PROGRESS 450/1450 complete=450 rows=9285 cards=6327
+PROGRESS 500/1450 complete=500 rows=10098 cards=6594
+PROGRESS 550/1450 complete=550 rows=10995 cards=6988
+PROGRESS 600/1450 complete=600 rows=11612 cards=7119
+PROGRESS 650/1450 complete=650 rows=12805 cards=7448
+PROGRESS 700/1450 complete=700 rows=14166 cards=7701
+PROGRESS 750/1450 complete=750 rows=15326 cards=7803
+PROGRESS 800/1450 complete=800 rows=16529 cards=7950
+PROGRESS 850/1450 complete=850 rows=17641 cards=8199
+PROGRESS 900/1450 complete=900 rows=19437 cards=8261
+PROGRESS 950/1450 complete=950 rows=21210 cards=8261
+PROGRESS 1000/1450 complete=1000 rows=23300 cards=8261
+PROGRESS 1050/1450 complete=1050 rows=25273 cards=8261
+PROGRESS 1100/1450 complete=1100 rows=26973 cards=8261
+PROGRESS 1150/1450 complete=1150 rows=28479 cards=8261
+PROGRESS 1200/1450 complete=1200 rows=29676 cards=8261
+PROGRESS 1250/1450 complete=1250 rows=31019 cards=8261
+PROGRESS 1300/1450 complete=1300 rows=32262 cards=8261
+PROGRESS 1350/1450 complete=1350 rows=33851 cards=8261
+PROGRESS 1400/1450 complete=1400 rows=35852 cards=8261
+PROGRESS 1450/1450 complete=1450 rows=36091 cards=8261
+FINISHED {"generated_at": "2026-10-15T02:11:48.290061+00:00", "cutoff": "2017-03-24", "scope": "Selected official Japanese and English product catalogs; Chinese official catalog checked and local MDPro3 Chinese database used for card cross-validation. Completeness is relative to cached selected catalog snapshots, not a global historical bibliography. Other locale caches are research references only.", "selected_locales": ["ja", "en", "cn"], "product_count": 1450, "status_counts": {"complete": 1450}, "mem

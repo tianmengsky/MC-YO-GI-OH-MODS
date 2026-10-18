@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="yugioh_projecte"
+version="${file.jarVersion}"
+displayName="Yu-Gi-Oh! × ProjectE EMC Compatibility"
+authors="Codex"
+description='''为游戏王整合模组的全部物品添加 EMC，保留卡牌、卡组盒和手套背包数据。'''
+[[dependencies.yugioh_projecte]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.28,48)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.yugioh_projecte]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.yugioh_projecte]]
+modId="projecte"
+mandatory=true
+versionRange="[1.0.1,1.1)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.yugioh_projecte]]
+modId="yugioh"
+mandatory=true
+versionRange="[1.0.0]"
+ordering="AFTER"
+side="BOTH"

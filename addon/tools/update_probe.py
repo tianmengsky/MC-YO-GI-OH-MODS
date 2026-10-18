@@ -1,0 +1,1 @@
+p='addon/tools/audit_legacy_mapping.py'; s=open(p,encoding='utf-8-sig').read().replace("available[mdlang]=json.loads(z.read(entry))","available.setdefault(mdlang,{}).update(json.loads(z.read(entry)))"); open(p,'w',encoding='utf-8').write(s)

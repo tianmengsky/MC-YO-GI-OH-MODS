@@ -1,0 +1,62 @@
+#############################################################
+# 本仓库只跟踪「源码 + 文档 + 可复现脚本 + 小型数据表」。
+# 以下内容为本地大件输入、构建产物、隔离运行环境与提取分析，
+# 保持在工作区磁盘上但不入库（合计约 89 GB）。
+#############################################################
+
+# ---------- 构建产物与依赖缓存 ----------
+.gradle/
+build/
+out/
+bin/
+*.class
+
+# ---------- JVM 崩溃转储 ----------
+*.hprof
+hs_err_pid*.log
+replay_pid*.log
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+
+# ---------- IDE / 编辑器 ----------
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# ---------- 大件输入与快照（仅本地保留） ----------
+/inputs/
+/MCYoGiOh/
+/archives/
+/logs/
+
+# ---------- 生成产物 ----------
+/generated/
+
+# ---------- 隔离运行环境 ----------
+/run-client/
+/run-server/
+/run-debug/
+/run-ui/
+/run-catalog/
+
+# ---------- 原模组提取件（可由 /inputs/mods 中的 JAR 复原） ----------
+/_ygo-analysis/base/
+/_ygo-analysis/fix/
+
+# ---------- 源数据库、抓取缓存与预览副本（可由脚本重新生成） ----------
+/_ygo-analysis/source-data/pack-inventory/.mapping-preview/
+/_ygo-analysis/source-data/pack-inventory/cache/
+/_ygo-analysis/source-data/pack-inventory/ygoprodeck-cardinfo-misc.json
+*.sqlite
+*.sqlite-*
+*.db
+
+# ---------- 杂项 ----------
+Thumbs.db
+desktop.ini
+*.log.gz

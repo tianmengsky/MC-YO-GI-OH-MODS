@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-15T02:11:48.290061+00:00",
+  "cutoff": "2017-03-24",
+  "scope": "Selected official Japanese and English product catalogs; Chinese official catalog checked and local MDPro3 Chinese database used for card cross-validation. Completeness is relative to cached selected catalog snapshots, not a global historical bibliography. Other locale caches are research references only.",
+  "selected_locales": [
+    "ja",
+    "en",
+    "cn"
+  ],
+  "product_count": 1450,
+  "status_counts": {
+    "complete": 1450
+  },
+  "membership_rows": 36091,
+  "distinct_konami_cids": 8261,
+  "locales": {
+    "ja": {
+      "products": 855,
+      "complete": 855,
+      "distinct_cids": 8231
+    },
+    "en": {
+      "products": 595,
+      "complete": 595,
+      "distinct_cids": 7863
+    },
+    "cn": {
+      "products": 0,
+      "complete": 0,
+      "distinct_cids": 0
+    }
+  },
+  "unknown_exact_dates": 46,
+  "gaps": [],
+  "limitations": [
+    "Official catalogs can omit discontinued and region-specific products; completeness is only relative to fetched catalog snapshots.",
+    "Language catalogs do not establish all North American/European/Oceanian country-specific product release dates. Preserve locale and market instead of merging regional printings.",
+    "Official membership is distinct card identities/rows, not physical deck quantities or booster collation odds.",
+    "Collection numbers and physical quantities are null until separate print/product verification.",
+    "Current live text and product catalog are not a snapshot of 2017 card effect/ruling errata.",
+    "Product membership cannot replace CID to engine passcode mapping; mappings are separate evidence records."
+  ]
+}

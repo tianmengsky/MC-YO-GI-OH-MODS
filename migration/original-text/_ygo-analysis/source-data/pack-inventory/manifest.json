@@ -1,0 +1,177 @@
+{
+  "created_at": "2026-10-15T02:12:57.207570+00:00",
+  "files": {
+    "build_mapping.py": {
+      "size": 10602,
+      "sha256": "5cf016e974229082a46cd7b5156e7c745e0ec7b0375d3f06901ccb15fb139590"
+    },
+    "card_passcode_mapping.csv": {
+      "size": 4896570,
+      "sha256": "dfed1c1db811520b1e543d2dca404ebca85bb62aaedaae7b220c67d8db2fd5a9"
+    },
+    "card_usage_flags.csv": {
+      "size": 815706,
+      "sha256": "ab852189674681b6c7a66535eecf550643c739de7cdf32399d115ddda915d041"
+    },
+    "card_usage_notice_evidence.csv": {
+      "size": 17934,
+      "sha256": "e39120cf058eca33563478f4d19e502fabbee368bbff6bfa2872b5572f82affe"
+    },
+    "card_usage_notice_summary.json": {
+      "size": 286,
+      "sha256": "7983469c3d238caa6cc972e785b3e78beadaf817f350245b57f6cc9ae9f2cb7f"
+    },
+    "cards.csv": {
+      "size": 485679,
+      "sha256": "7838356adb6e20303b9e374488e012d729c372930823b8b6916dec1f5e519add"
+    },
+    "catalog_ae.csv": {
+      "size": 49394,
+      "sha256": "191d7933a53f9ca3b04436c090d4eec03b5aab82a879f5f171a01d8f0c003c53"
+    },
+    "catalog_cn.csv": {
+      "size": 71738,
+      "sha256": "2f79966fcad9e3e94c4b671d41758cbaa58ee8574b8ee3743e4b547a26983dfc"
+    },
+    "catalog_de.csv": {
+      "size": 267133,
+      "sha256": "2b0c0727d255a235691f6b6131ec36047a69b6a2599c0387d5e585f6cc7d0179"
+    },
+    "catalog_en.csv": {
+      "size": 371769,
+      "sha256": "7f4f44b6ac73cdc7b5b560d75132ec16a5d9c01880cd0be44cd77de18d7f7fe3"
+    },
+    "catalog_es.csv": {
+      "size": 260397,
+      "sha256": "ad3d6defbdbfe930801061dbc38177eed9434b85eac3bc6aa651cc3060fdce78"
+    },
+    "catalog_fr.csv": {
+      "size": 266866,
+      "sha256": "c26c1cf4698383b654f2c03da6645902e1b53d9c5f5c3526d8a573b070ed975c"
+    },
+    "catalog_it.csv": {
+      "size": 268120,
+      "sha256": "fa9f9dacd6c59c46cd2cc66eb5b902010ce027ce11ec5edce78aa80198a1715c"
+    },
+    "catalog_ja.csv": {
+      "size": 633957,
+      "sha256": "6717f67d1111d22c3e6a7637ac67631afab4e7706ee0867d19fd1e562f98c0e1"
+    },
+    "catalog_ko.csv": {
+      "size": 242950,
+      "sha256": "7446b596b37a3198f78f2198d63f27af4b38506c961abd1aa7a0de7b1f91b805"
+    },
+    "catalog_pt.csv": {
+      "size": 164792,
+      "sha256": "4ed3ca995264fac90f88a739e6b000e4cdc48fd98bd9a65ff4fcd4f3e647b656"
+    },
+    "collect_inventory.py": {
+      "size": 15951,
+      "sha256": "17e04f8ec3940931e19ab56032f44e11d57ae12ba08a836483004311ab56d138"
+    },
+    "compare_pools.py": {
+      "size": 5270,
+      "sha256": "dab1c86a0e6ad0f6e7f014140e6d8cf926b69249200c6f6ce8732173ae3c5ba7"
+    },
+    "coverage.json": {
+      "size": 1745,
+      "sha256": "ab8506d9c597d8aaeededa2b70a1faa018c0beebbf3694a62294451ae92def03"
+    },
+    "crawl-final-ja-en-cn.log": {
+      "size": 2154,
+      "sha256": "7d906cfd868bffda57070690e7b5455ffafbf4a227d880cf96743454c2aa5cc9"
+    },
+    "crawl-resume-2.log": {
+      "size": 2706,
+      "sha256": "4e970db89aa61ecd157c3e0c44fe0eec1987c533ebf19aabd8a55378bfdb31cd"
+    },
+    "crawl-resume.log": {
+      "size": 3546,
+      "sha256": "da48e79c7f06c4866106918da0f531ead419269ae43c543216686563961d7113"
+    },
+    "engine_cards.csv": {
+      "size": 2845651,
+      "sha256": "54318f0433c3f604d4416655a5ab9747f8e7a4494d7dffdd7d9d9c170e10465a"
+    },
+    "example.html": {
+      "size": 369973,
+      "sha256": "0cdce87228db552bbf2ac8a70f2752a0f4c1af5aae185d76f1080b534b0133e6"
+    },
+    "extract_usage_notices.py": {
+      "size": 3423,
+      "sha256": "82ee933218a2a9d2bc374951db2897e6f767598de09c29b106109ea91532b73d"
+    },
+    "finalize_report.py": {
+      "size": 11486,
+      "sha256": "d3984a5a14cee8700612e7ce5613871d3ee3026b2c0966e9a82750893aa9de30"
+    },
+    "index_en.html": {
+      "size": 703585,
+      "sha256": "34734ee47538ee3c9df4f41e1ddcf56603f980b2b12ff9063cbacf729775fdd3"
+    },
+    "inventory.sqlite": {
+      "size": 25923584,
+      "sha256": "f6383624bfef20a44a78e6743818d54e727e61a8c71e5015be50a0dc57ce7136"
+    },
+    "mapping_candidates.csv": {
+      "size": 91,
+      "sha256": "13416f33ef61db7fcfa6587105dde3a89931e883099fd3c5f22682191ec84179"
+    },
+    "mapping_coverage.json": {
+      "size": 1525,
+      "sha256": "04e7e25b3c003c32efd10de802717e75b5b0475e3c8888fd95a109dbf3b56c64"
+    },
+    "pool_comparison.json": {
+      "size": 1192,
+      "sha256": "61e1687f96f2321cbefdc3a8fddca82d5f98a50a42ac33edd8ef03f8610c3186"
+    },
+    "pool_differences.csv": {
+      "size": 4846,
+      "sha256": "966018f7eb87c7b16ff3620c2d5f60e11cba27c2e03c4bc3669d547d00927352"
+    },
+    "pool_unmapped_official_cards.csv": {
+      "size": 3165,
+      "sha256": "5940ebf94704db756a9f2ca882250939464cdce4c529423df0705e5e39cf900b"
+    },
+    "product_cards.csv": {
+      "size": 6782127,
+      "sha256": "cd2eb3638f3196b581a07280ff9ebe47863c19988aecef4076a2e844655bd5db"
+    },
+    "product_composition_review.csv": {
+      "size": 56228,
+      "sha256": "1faae4c5364ffdf75aca31eab66b7a6172eafd7254eb3156f44b5346a0d79167"
+    },
+    "products.csv": {
+      "size": 724891,
+      "sha256": "009af0110bf05951f38b2e92cbafd6aaa896260c0d57a7e2410bda7fde92f7dc"
+    },
+    "README-字段与复现.md": {
+      "size": 10648,
+      "sha256": "fe646a0d6bbc10f57cd182f9bf64614de6566474c495429f0534ffd0c26b35a7"
+    },
+    "region_catalog_coverage.json": {
+      "size": 1944,
+      "sha256": "6967569b89b6a21baf21b484d4b1bd52a0057c765c2c5a48ad02bf725fcdca3a"
+    },
+    "regional_product_gaps.csv": {
+      "size": 810983,
+      "sha256": "c0bdbbc808e174dc7627f2cbc4994903a2b9773d81569caa32c0d54dc4365728"
+    },
+    "verification.json": {
+      "size": 1838,
+      "sha256": "e88d824b33c57894b81aa4efee67bafbcdd10e9d25415a32dac3b8a24d6d47b7"
+    },
+    "verify_inventory.py": {
+      "size": 6104,
+      "sha256": "86afedbfad4eb26629ec2013c213534574c2fca27cf8b851b4e962c31371b5ee"
+    },
+    "ygoprodeck-cardinfo-misc.json": {
+      "size": 24957767,
+      "sha256": "cd0170a4fb4741ba2b86ea1a68568808b8f87e2c37e38f84e362b0a187cfc083"
+    },
+    "盘点覆盖与缺口报告.md": {
+      "size": 5934,
+      "sha256": "b8ac39f45dc9f69c863ee70bb554a0c0122924967e36263474781d90f0a874ac"
+    }
+  }
+}
