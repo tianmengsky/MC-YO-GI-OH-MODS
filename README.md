@@ -45,7 +45,20 @@ MDPro3 快照不是完整可运行的 Unity 程序，也不是其源码仓库；
 
 入库内容：`addon/` 附属模组工程（源码、Gradle 配置、`tools/` 脚本、`content/` 数据、卡面资源）、`docs/`、`migration/` 文本与清单、`mdpro3-p0/` 历史探测笔记与日志、`_ygo-analysis/` 的执行计划、兼容方案与源库复现脚本。
 
-不入库内容（保留本地，见 `.gitignore`）：`inputs/`、`MCYoGiOh/`、`generated/`、`run-*/`、`archives/`、`logs/`、`_ygo-analysis/base|fix/` 提取件、源库 SQLite、抓取缓存与 23 MB 级 JSON 快照、Gradle `build/` 与 `.gradle/`、JVM `*.hprof`。这些可按 `inputs/mods` 中的 JAR 或 `_ygo-analysis/source-data/pack-inventory/` 的脚本重新生成。
+不入库内容（保留本地，见 `.gitignore`）：`inputs/`、`MCYoGiOh/`、`generated/`、`run-*/`、`archives/`、`logs/`、`_ygo-analysis/base|fix/` 提取件、源库 SQLite、抓取缓存与 23 MB 级 JSON 快照、Gradle `build/` 与 `.gradle/`、JVM `*.hprof`、`releases/` 中的发布 JAR。这些可按 `inputs/mods` 中的 JAR 或 `_ygo-analysis/source-data/pack-inventory/` 的脚本重新生成。
+
+### 发布件
+
+当前发布件为 `releases/0.6.33-alpha/yugioh-mdpro-integrated-0.6.33-alpha.jar`，SHA-256 `6662d14a52316b1d6f59235937fd40f804e40ffbe00ce23aad0437d9b97440ee`，与工作区实例 `MCYoGiOh` 中已部署的 JAR 逐字节一致。同目录 `SHA256SUMS.txt` 记录该值；Gradle 构建产物仍输出到 `addon/build/libs/`，两种位置以 SHA-256 校验为准。
+
+### 磁盘清理（2026-10-18）
+
+已删除 82,352 MB（80.4 GB，按 1 GB = 1024 MB 计）共 48,329 个历史文件：`addon/build/`（42,612 MB，中间产物与 68 个旧版 JAR）、`generated/deployment-backup/`（27,924 MB，49 个 0.1–0.6.32 部署备份）、`generated/release-snapshot/`（8,908 MB，20 个旧发行 JAR）、`generated/tmp/`（707 MB），以及 `generated/gui-redesign-0.6.27/`、`gui-refinement-0.6.28/`、`gui-crash-20261017/` 内的旧版 JAR（各 733 MB，截图与日志证据保留）。工作区由约 93.8 GB 降至约 14.5 GB。
+
+`run-client`、`run-debug` 的旧版 JAR 已替换为 0.6.33-alpha（复制后按 SHA-256 校验通过再删除旧件），`run-server` 无模组 JAR 无需处理。
+
+保留：`releases/` 当前发布件、`MCYoGiOh` 实例已部署件、`inputs/` 冻结输入、`generated/gradle-home`（离线构建缓存）、`generated/deps`、`pack-art`、`content` 等打包依赖，以及 `run-*` 隔离运行环境。旧版 JAR 可依据 Git 历史与 `addon/tools/package_integrated.py` 重新构建。
+
 
 常用操作：
 
